@@ -1,7 +1,7 @@
 {
     "name": "@test/test",
     "description": "Test",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "author": "andrii",
     "packages": [
         {
