@@ -1,0 +1,11 @@
+{
+    "name": "@test/test",
+    "description": "Test",
+    "version": "1.0.4",
+    "author": "andrii",
+    "packages": [
+        {
+            "url": "https://github.com/andriizavoiko/tree/tree/main/subfolder"
+        }
+    ]
+}
