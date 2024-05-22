@@ -34,7 +34,7 @@ module "cdn" {
   }, var.origin)
 
   default_cache_behavior = merge({
-    target_origin_id       = "origin_access_control" # key in `OAC` above
+    target_origin_id       = var.target_origin_id # key in `OAC` above
     viewer_protocol_policy = "redirect-to-https"
 
     allowed_methods = ["GET", "HEAD"]
@@ -73,6 +73,7 @@ module "cdn" {
   tags = var.tags
 
   web_acl_id = var.web_acl_id
+  depends_on = [aws_route53_record.acm, module.acm]
 }
 
 resource "aws_cloudfront_function" "viewer_request" {

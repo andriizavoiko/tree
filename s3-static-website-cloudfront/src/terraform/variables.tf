@@ -26,6 +26,11 @@ variable "create_bucket" {
 
 variable "force_destroy" {}
 
+variable "target_origin_id" {
+  type    = string
+  default = "origin_access_control"
+}
+
 variable "bucket_name" {
   description = "bucket name"
   type        = string
