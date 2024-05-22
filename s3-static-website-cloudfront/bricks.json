@@ -1,0 +1,12 @@
+{
+  "author": "google-oauth2|110270771151464173524",
+  "description": "",
+  "license": "ISC",
+  "name": "s3-static-website-cloudfront",
+  "variables": {
+    "terraform": [
+      "/variables.tf"
+    ]
+  },
+  "version": "1.0.0"
+}
