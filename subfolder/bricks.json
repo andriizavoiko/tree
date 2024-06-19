@@ -1,13 +1,19 @@
 {
-    "name": "test",
-    "description": "Test",
-    "version": "1.0.0",
-    "author": "andrii",
-    "website": "https://test.com",
-    "packages": [
+  "name": "test",
+  "description": "Test",
+  "version": "1.0.0",
+  "author": "andrii",
+  "website": "https://test.com",
+  "props": {
+    "bucket_name": {
+      "type": "string",
+      "description": "The bucket name"
+    }
+  },
+  "packages": [
     {
-      "properties": {},
-      "url": "https://github.com/andriizavoiko/tree/tree/chore/test/folder/subfolder2"
+      "id": "test2-new",
+      "path": "https://github.com/andriizavoiko/tree/tree/updated-bricks/subfolder2"
     }
   ]
 }
