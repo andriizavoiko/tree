@@ -1,11 +1,22 @@
 {
-    "name": "@test/test",
-    "description": "Test",
-    "version": "1.0.4",
-    "author": "andrii",
-    "packages": [
-        {
-            "url": "https://github.com/andriizavoiko/tree/tree/main/subfolder"
-        }
-    ]
+  "name": "@test/test",
+  "description": "Test",
+  "version": "1.0.4",
+  "author": "andrii",
+  "props": {
+    "bucket_name": {
+      "type": "string",
+      "description": "The bucket name"
+    },
+    "region": {
+      "type": "string",
+      "description": "What is the region"
+    }
+  },
+  "packages": [
+    {
+      "id": "test",
+      "path": "https://github.com/andriizavoiko/tree/tree/updated-bricks/subfolder"
+    }
+  ]
 }

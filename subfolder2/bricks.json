@@ -1,7 +1,17 @@
 {
-    "name": "test2-new",
-    "description": "Test",
-    "version": "1.0.0",
-    "author": "andrii",
-    "website": "https://test.com"
+  "name": "test2-new",
+  "description": "Test",
+  "version": "1.0.0",
+  "author": "andrii",
+  "website": "https://test.com",
+  "props": {
+    "bucket_name": {
+      "type": "string",
+      "description": "The bucket name"
+    },
+    "region": {
+      "type": "string",
+      "description": "What is the region"
+    }
+  }
 }
