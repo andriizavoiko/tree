@@ -8,6 +8,10 @@
     "bucket_name": {
       "type": "string",
       "description": "The bucket name"
+    },
+    "region": {
+      "type": "string",
+      "description": "What is the region"
     }
   },
   "packages": [

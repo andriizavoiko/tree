@@ -4,9 +4,33 @@
   "license": "ISC",
   "name": "s3-static-website-cloudfront",
   "variables": {
-    "terraform": [
-      "/variables.tf"
-    ]
+    "terraform": ["/variables.tf"]
+  },
+  "props": {
+    "acl": {
+      "type": "string",
+      "description": "What is the region"
+    },
+    "bucket_prefix": {
+      "type": "string",
+      "description": "The bucket name"
+    },
+    "bucket": {
+      "type": "string",
+      "description": "The bucket name"
+    },
+    "force_destroy": {
+      "type": "string",
+      "description": "The bucket name"
+    },
+    "policy": {
+      "type": "string",
+      "description": "The bucket name"
+    },
+    "tags": {
+      "type": "string",
+      "description": "The bucket name"
+    }
   },
   "version": "1.0.0"
 }
