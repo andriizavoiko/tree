@@ -11,6 +11,12 @@
 # }
 
 terraform {
+  backend "s3" {
+    bucket = "bluebricks-tf-state"
+    key    = "hibob/sqs-sns-demo/terraform.tfstate"
+    region = "eu-central-1"
+  }
+  
   required_providers {
     aws = {
       source  = "hashicorp/aws"
