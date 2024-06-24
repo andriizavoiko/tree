@@ -1,8 +1,8 @@
 ## General
-organization = "bluebricks-dev"
-environment  = "dev"
-account_id   = "891377293969"
-region       = "eu-central-1"
+## organization = "bluebricks-dev"
+## environment  = "dev"
+## account_id   = "891377293969"
+## region       = "eu-central-1"
 
 ## Replication
 is_replicated = false
