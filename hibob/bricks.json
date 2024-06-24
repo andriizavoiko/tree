@@ -1,0 +1,44 @@
+{
+    "name": "Distributed_Application_Configuration",
+    "description": "Comprehensive configuration for distributed SQS and SNS resources with dynamic environment handling and full variable integration",
+    "version": "1.0.0",
+    "props": {
+        "tags": {
+            "type": "map(string)",
+            "description": "Standard tags for all resources"
+        },
+        "organization": {
+            "type": "string",
+            "description": "The organization this configuration belongs to"
+        },
+        "environment": {
+            "type": "string",
+            "description": "The deployment environment (e.g., dev, prod)"
+        },
+        "region": {
+            "type": "string",
+            "description": "The AWS region where resources are deployed"
+        },
+        "account_id": {
+            "type": "string",
+            "description": "The AWS account ID where resources are deployed"
+        }
+    },
+    "outs": {
+        "sns_topic_arns": {
+            "type": "array",
+            "description": "ARNs of the SNS topics",
+            "value": "Data.sns_topics.sns_topic_arn"
+        },
+        "sqs_queue_arns": {
+            "type": "array",
+            "description": "ARNs of the SQS queues",
+            "value": "Data.sqs_queues.sqs_queue_arn"
+        }
+    },
+    "computed": {},
+    "native": {
+        "type": "terraform",
+        "path": "./src/app-infra"
+    }
+}
