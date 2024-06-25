@@ -1,4 +1,9 @@
 ## General
+variable "tags" {
+  description = "Tags"
+  type        = map
+}
+
 variable "organization" {
   description = "Organization name"
   type        = string

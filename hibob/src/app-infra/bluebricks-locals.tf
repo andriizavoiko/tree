@@ -15,10 +15,10 @@ locals {
     "environment" = var.environment
     "created_By"  = "Terraform"
   }
-  standard_tags_local = {
-    "environment" = "${var.environment}-local"
-    "created_By"  = "Terraform"
-  }
+  standard_tags_local = merge(
+    local.standard_tags,
+    var.tags
+  )
   sns_topic_config = [
     {
       name      = "${local.prefix}-user-notifications"
