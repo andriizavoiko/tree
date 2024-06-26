@@ -40,7 +40,23 @@
             "description": "Dead Letter Queue message retention seconds"
         }
     },
-    "outs": {},
+    "outs": {
+        "hibob-sqs-local-Compensation": {
+            "type": "string",
+            "description": "Compensation topic",
+            "value": "Data.hibob-sqs-local-Compensation.id"
+        },
+        "hibob-sqs-local-Docs": {
+            "type": "string",
+            "description": "Docs topic",
+            "value": "Data.hibob-sqs-local-Docs.id"
+        },
+        "hibob-sqs-local-Mapping": {
+            "type": "string",
+            "description": "Mapping topic",
+            "value": "Data.hibob-sqs-local-Mapping.id"
+        }
+    },
     "packages": [
         {
             "id": "hibob-sqs-local-Compensation",
