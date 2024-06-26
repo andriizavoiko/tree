@@ -1,9 +1,3 @@
-## General
-variable "tags" {
-  description = "Tags"
-  type        = map
-}
-
 variable "organization" {
   description = "Organization name"
   type        = string
@@ -15,7 +9,7 @@ variable "environment" {
 }
 
 variable "region" {
-  description = "Region name"
+  description = "AWS region"
   type        = string
 }
 
@@ -24,29 +18,32 @@ variable "account_id" {
   type        = string
 }
 
-## Replication
-variable "is_replicated" {
-  description = "Regional replication"
-  type        = bool
-}
-
-variable "regions" {
-  description = "Map of regions"
+variable "tags" {
+  description = "Additional tags"
   type        = map(string)
+  default     = {}
 }
 
-variable "azs" {
-  description = "Map of azs"
-  type        = list(string)
+variable "message_retention_seconds" {
+  description = "Message retention seconds"
+  type        = number
+  default     = 1209600
 }
 
-## S3
-variable "s3_replication_role" {
-  description = "Role to replicate S3 buckets"
-  type        = string
+variable "visibility_timeout_seconds" {
+  description = "Visibility timeout seconds"
+  type        = number
+  default     = 300
 }
 
-## Akeyless
-variable "access_id" {
-  type = string
+variable "max_receive_count" {
+  description = "Max receive count for redrive policy"
+  type        = number
+  default     = 5
+}
+
+variable "dlq_message_retention_seconds" {
+  description = "Dead Letter Queue message retention seconds"
+  type        = number
+  default     = 1209600
 }

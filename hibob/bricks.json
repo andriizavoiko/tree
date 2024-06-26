@@ -22,6 +22,22 @@
         "account_id": {
             "type": "string",
             "description": "The AWS account ID where resources are deployed"
+        },
+        "message_retention_seconds": {
+            "type": "number",
+            "description": "Message retention seconds"
+        },
+        "visibility_timeout_seconds": {
+            "type": "number",
+            "description": "Visibility timeout seconds"
+        },
+        "max_receive_count": {
+            "type": "number",
+            "description": "Max receive count for redrive policy"
+        },
+        "dlq_message_retention_seconds": {
+            "type": "number",
+            "description": "Dead Letter Queue message retention seconds"
         }
     },
     "outs": {

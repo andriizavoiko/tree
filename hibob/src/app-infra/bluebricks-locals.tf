@@ -7,18 +7,19 @@ locals {
   prefix_local      = "${var.organization}-${var.environment}-local-${var.region}"
   desc_prefix_local = title("${var.organization} ${var.environment} Local ${var.region}")
 
-
   sqs_arn_prefix = "arn:aws:sqs:${var.region}:${var.account_id}:"
 
   ## Environment name set by the Terraform workspace
   standard_tags = {
-    "environment" = var.environment
-    "created_By"  = "Terraform"
+    environment = var.environment
+    created_By  = "Terraform"
   }
+
   standard_tags_local = merge(
     local.standard_tags,
     var.tags
   )
+
   sns_topic_config = [
     {
       name      = "${local.prefix}-user-notifications"
@@ -30,7 +31,7 @@ locals {
       protocol = "sqs"
       sub_topic = {
         recruiting = {
-          endpoint = "arn:aws:sqs:${var.region}:${var.account_id}:Recruiting-bob-notifications-${title(var.environment)}"
+          endpoint = "${local.sqs_arn_prefix}Recruiting-bob-notifications-${title(var.environment)}"
         }
       }
     },
@@ -59,81 +60,80 @@ locals {
   sqs_queue_config_local = [
     {
       name = "Compensation-${title(format("%s-local", var.environment))}"
-
       dlq = {
         name                      = "Compensation-${title(format("%s-local", var.environment))}-Dead-Letter"
-        message_retention_seconds = 1209600
+        message_retention_seconds = var.dlq_message_retention_seconds
       }
-      message_retention_seconds  = 1209600
-      visibility_timeout_seconds = 300
+      message_retention_seconds  = var.message_retention_seconds
+      visibility_timeout_seconds = var.visibility_timeout_seconds
 
       redrive_policy = {
-        maxReceiveCount = 5
+        maxReceiveCount = var.max_receive_count
       }
-      cloudwatch_metric_alarm = [{ name = "test" }]
+     
     },
     {
       name = "Docs-${title(format("%s-local", var.environment))}"
-
       dlq = {
         name                      = "Docs-${title(format("%s-local", var.environment))}-Dead-Letter"
-        message_retention_seconds = 1209600
+        message_retention_seconds = var.dlq_message_retention_seconds
       }
-      message_retention_seconds  = 1209600
-      visibility_timeout_seconds = 300
+      message_retention_seconds  = var.message_retention_seconds
+      visibility_timeout_seconds = var.visibility_timeout_seconds
 
       redrive_policy = {
-        maxReceiveCount = 5
+        maxReceiveCount = var.max_receive_count
       }
-      cloudwatch_metric_alarm = [{ name = "test" }]
-  }]
+     
+    }
+  ]
+
   ## SQS
   sqs_queue_config = [
     {
       name = "Recruiting-bob-notifications-${title(var.environment)}"
-
       dlq = {
         name                      = "Recruiting-bob-notifications-${title(var.environment)}-Dead-Letter"
-        message_retention_seconds = 1209600
+        message_retention_seconds = var.dlq_message_retention_seconds
       }
-      message_retention_seconds  = 1209600
-      visibility_timeout_seconds = 300
+      message_retention_seconds  = var.message_retention_seconds
+      visibility_timeout_seconds = var.visibility_timeout_seconds
 
       redrive_policy = {
-        maxReceiveCount = 5
+        maxReceiveCount = var.max_receive_count
       }
-      cloudwatch_metric_alarm = [{ name = "test" }]
+     
     },
     {
       name = "Compensation-${title(var.environment)}"
-
       dlq = {
         name                      = "Compensation-${title(var.environment)}-Dead-Letter"
-        message_retention_seconds = 1209600
+        message_retention_seconds = var.dlq_message_retention_seconds
       }
-      message_retention_seconds  = 1209600
-      visibility_timeout_seconds = 300
+      message_retention_seconds  = var.message_retention_seconds
+      visibility_timeout_seconds = var.visibility_timeout_seconds
 
       redrive_policy = {
-        maxReceiveCount = 5
+        maxReceiveCount = var.max_receive_count
       }
-      cloudwatch_metric_alarm = [{ name = "test" }]
+     
     },
     {
       name = "Docs-${title(var.environment)}"
-
       dlq = {
         name                      = "Docs-${title(var.environment)}-Dead-Letter"
-        message_retention_seconds = 1209600
+        message_retention_seconds = var.dlq_message_retention_seconds
       }
-      message_retention_seconds  = 1209600
-      visibility_timeout_seconds = 300
+      message_retention_seconds  = var.message_retention_seconds
+      visibility_timeout_seconds = var.visibility_timeout_seconds
 
       redrive_policy = {
-        maxReceiveCount = 5
+        maxReceiveCount = var.max_receive_count
       }
-      cloudwatch_metric_alarm = [{ name = "test" }]
-  }]
+     
+    }
+  ]
+
   sns_topic_config_local = [
     {
       name      = "${local.prefix_local}-user-notifications"
@@ -144,8 +144,6 @@ locals {
       name      = "${local.prefix_local}-backend-notifications"
       protocol  = "sqs"
       sub_topic = {}
-    },
+    }
   ]
 }
-
-
