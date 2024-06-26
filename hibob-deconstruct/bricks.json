@@ -52,8 +52,8 @@
             "value": "Data.hibob-sqs-local-Docs.sqs_queue_arns"
         },
         "hibob-sqs-local-Mapping": {
-            "type": "string",
-            "description": "Mapping topic",
+            "type": "array",
+            "description": "List of ARNs for the SQS queues",
             "value": "Data.hibob-sqs-local-Mapping.sqs_queue_arns"
         }
     },

@@ -41,18 +41,12 @@
         }
     },
     "outs": {
-        "sns_topic_arns": {
-            "type": "array",
-            "description": "ARNs of the SNS topics",
-            "value": "Data.sns_topics.sns_topic_arn"
-        },
         "sqs_queue_arns": {
             "type": "array",
             "description": "ARNs of the SQS queues",
             "value": "Data.sqs_queues.sqs_queue_arn"
         }
     },
-    "computed": {},
     "native": {
         "type": "terraform",
         "path": "./src/app-infra"
