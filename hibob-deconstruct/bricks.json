@@ -1,0 +1,51 @@
+{
+    "name": "Distributed_Application_Configuration",
+    "description": "Comprehensive configuration for distributed SQS and SNS resources with dynamic environment handling and full variable integration",
+    "version": "1.0.1",
+    "props": {
+        "tags": {
+            "type": "map(string)",
+            "description": "Standard tags for all resources"
+        },
+        "organization": {
+            "type": "string",
+            "description": "The organization this configuration belongs to"
+        },
+        "environment": {
+            "type": "string",
+            "description": "The deployment environment (e.g., dev, prod)"
+        },
+        "region": {
+            "type": "string",
+            "description": "The AWS region where resources are deployed"
+        },
+        "account_id": {
+            "type": "string",
+            "description": "The AWS account ID where resources are deployed"
+        },
+        "message_retention_seconds": {
+            "type": "number",
+            "description": "Message retention seconds"
+        },
+        "visibility_timeout_seconds": {
+            "type": "number",
+            "description": "Visibility timeout seconds"
+        },
+        "max_receive_count": {
+            "type": "number",
+            "description": "Max receive count for redrive policy"
+        },
+        "dlq_message_retention_seconds": {
+            "type": "number",
+            "description": "Dead Letter Queue message retention seconds"
+        }
+    },
+    "outs": {},
+    "packages": [
+        {
+            "id": "hibob-sqs-local-Compensation",
+            "path": "git::https://github.com/andriizavoiko//hibob-sqs-local-Compensation?ref=_pov-variables",
+            "vesrion": "1.0.0"
+        }
+    ]
+}
