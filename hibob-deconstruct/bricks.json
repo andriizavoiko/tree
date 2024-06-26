@@ -41,17 +41,17 @@
         }
     },
     "outs": {
-        "hibob-sqs-local-Compensation": {
+        "hibob-sqs-local-Compensation-arn": {
             "type": "string",
             "description": "Compensation topic",
             "value": "Data.hibob-sqs-local-Compensation.sqs_queue_arns"
         },
-        "hibob-sqs-local-Docs": {
+        "hibob-sqs-local-Docs-arn": {
             "type": "string",
             "description": "Docs topic",
             "value": "Data.hibob-sqs-local-Docs.sqs_queue_arns"
         },
-        "hibob-sqs-local-Mapping": {
+        "hibob-sqs-local-Mapping-arn": {
             "type": "array",
             "description": "List of ARNs for the SQS queues",
             "value": "Data.hibob-sqs-local-Mapping.sqs_queue_arns"
