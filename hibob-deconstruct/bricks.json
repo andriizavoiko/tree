@@ -1,7 +1,7 @@
 {
     "name": "Deconstructed_Distributed_Application_Configuration",
     "description": "Comprehensive configuration for distributed SQS and SNS resources with dynamic environment handling and full variable integration",
-    "version": "1.0.1",s
+    "version": "1.0.1",
     "props": {
         "tags": {
             "type": "map(string)",
