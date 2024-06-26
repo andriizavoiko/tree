@@ -1,7 +1,7 @@
 {
-    "name": "Distributed_Application_Configuration",
+    "name": "Deconstructed_Distributed_Application_Configuration",
     "description": "Comprehensive configuration for distributed SQS and SNS resources with dynamic environment handling and full variable integration",
-    "version": "1.0.1",
+    "version": "1.0.1",s
     "props": {
         "tags": {
             "type": "map(string)",
@@ -44,8 +44,18 @@
     "packages": [
         {
             "id": "hibob-sqs-local-Compensation",
-            "path": "git::https://github.com/andriizavoiko//hibob-sqs-local-Compensation?ref=_pov-variables",
-            "vesrion": "1.0.0"
+            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Compensation.git?ref=_pov-variables",
+            "version": "1.0.0"
+        },
+        {
+            "id": "hibob-sqs-local-Docs",
+            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Docs.git?ref=_pov-variables",
+            "version": "1.0.0"
+        },
+        {
+            "id": "hibob-sqs-local-Mapping",
+            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Mapping.git?ref=_pov-variables",
+            "version": "1.0.0"
         }
     ]
 }
