@@ -44,32 +44,32 @@
         "hibob-sqs-local-Compensation-arn": {
             "type": "string",
             "description": "Compensation topic",
-            "value": "Data.hibob-sqs-local-Compensation.sqs_queue_arns"
+            "value": "Data.hibob_sqs_local_Compensation.sqs_queue_arns"
         },
         "hibob-sqs-local-Docs-arn": {
             "type": "string",
             "description": "Docs topic",
-            "value": "Data.hibob-sqs-local-Docs.sqs_queue_arns"
+            "value": "Data.hibob_sqs_local_Docs.sqs_queue_arns"
         },
         "hibob-sqs-local-Mapping-arn": {
             "type": "array",
             "description": "List of ARNs for the SQS queues",
-            "value": "Data.hibob-sqs-local-Mapping.sqs_queue_arns"
+            "value": "Data.hibob_sqs_local_Mapping.sqs_queue_arns"
         }
     },
     "packages": [
         {
-            "id": "hibob-sqs-local-Compensation",
+            "id": "hibob_sqs_local_Compensation",
             "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Compensation.git?ref=_pov-variables",
             "version": "1.0.0"
         },
         {
-            "id": "hibob-sqs-local-Docs",
+            "id": "hibob_sqs_local_Docs",
             "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Docs.git?ref=_pov-variables",
             "version": "1.0.0"
         },
         {
-            "id": "hibob-sqs-local-Mapping",
+            "id": "hibob_sqs_local_Mapping",
             "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Mapping.git?ref=_pov-variables",
             "version": "1.0.0"
         }

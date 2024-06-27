@@ -1,5 +1,5 @@
 {
-    "name": "hibob-sqs-local-Mapping",
+    "name": "hibob_sqs_local_Mapping",
     "description": "Comprehensive configuration for distributed SQS and SNS resources with dynamic environment handling and full variable integration",
     "version": "1.0.1",
     "props": {
