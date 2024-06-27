@@ -60,17 +60,17 @@
     "packages": [
         {
             "id": "hibob_sqs_local_Compensation",
-            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Compensation.git?ref=_pov-variables",
+            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Compensation?ref=_pov-variables",
             "version": "1.0.0"
         },
         {
             "id": "hibob_sqs_local_Docs",
-            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Docs.git?ref=_pov-variables",
+            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Docs?ref=_pov-variables",
             "version": "1.0.0"
         },
         {
             "id": "hibob_sqs_local_Mapping",
-            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Mapping.git?ref=_pov-variables",
+            "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Mapping?ref=_pov-variables",
             "version": "1.0.0"
         }
     ]
