@@ -39,12 +39,7 @@
         {
             "id": "vpc1",
             "path": "git::https://codeberg.org/bbx/artifacts.git//dummy-vpc",
-            "vesrion": "1.2.3",
-            "props": {
-                "region": {
-                    "value": "'Data.s3.bucket_name'"
-                }
-            }
+            "vesrion": "1.2.3"
         }
     ]
 }
