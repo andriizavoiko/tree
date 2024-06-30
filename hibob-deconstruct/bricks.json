@@ -63,13 +63,8 @@
             "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Compensation?ref=_pov-variables",
             "version": "1.0.0",
             "props": {
-                "tags": {
-                    "type": "map(string)",
-                    "description": "Standard tags for all resources"
-                },
                 "organization": {
-                    "type": "string",
-                    "description": "The organization this configuration belongs to"
+                    "value": "Props.organization",
                 }
             }
         },
@@ -78,13 +73,8 @@
             "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Docs?ref=_pov-variables",
             "version": "1.0.0",
             "props": {
-                "tags": {
-                    "type": "map(string)",
-                    "description": "Standard tags for all resources"
-                },
                 "organization": {
-                    "type": "string",
-                    "description": "The organization this configuration belongs to"
+                    "value": "Props.organization",
                 }
             }
         },
@@ -93,13 +83,8 @@
             "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Mapping?ref=_pov-variables",
             "version": "1.0.0",
             "props": {
-                "tags": {
-                    "type": "map(string)",
-                    "description": "Standard tags for all resources"
-                },
                 "organization": {
-                    "type": "string",
-                    "description": "The organization this configuration belongs to"
+                    "value": "Props.organization",
                 }
             }
         }
