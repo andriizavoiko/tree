@@ -1,0 +1,50 @@
+{
+    "name": "s3PoC",
+    "description": "s3PoC is the smallest possible example of BBx package",
+    "version": "0.0.1",
+    "props": {
+        "vpc_id": {
+            "type": "string",
+            "required": false,
+            "description": "The ID of the VPC"
+        }
+    },
+    "outs": {
+        "bucket_name": {
+            "type": "string",
+            "description": "The name of the S3 bucket",
+            "value": "Data.s3.bucket_name"
+        },
+        "vpc_id": {
+            "type": "string",
+            "description": "The ID of the VPC",
+            "value": "Props.vpc_id ?? Data.vpc1.vpc_id"
+        }
+    },
+    "computed": {},
+    "packages": [
+        {
+            "id": "s3",
+            "path": "git::https://codeberg.org/bbx/artifacts.git//terraform-aws-s3",
+            "version": "0.0.1",
+            "props": {
+                "region": {
+                    "value": "'us-west-2'"
+                },
+                "bucket_name": {
+                    "value": "Props.vpc_id ?? Data.vpc1.vpc_id"
+                }
+            }
+        },
+        {
+            "id": "vpc1",
+            "path": "git::https://codeberg.org/bbx/artifacts.git//dummy-vpc",
+            "vesrion": "1.2.3",
+            "props": {
+                "region": {
+                    "value": "'Data.s3.bucket_name'"
+                }
+            }
+        }
+    ]
+}
