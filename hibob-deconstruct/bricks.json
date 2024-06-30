@@ -9,15 +9,18 @@
         },
         "organization": {
             "type": "string",
-            "description": "The organization this configuration belongs to"
+            "description": "The organization this configuration belongs to",
+            "value": "hola"
         },
         "environment": {
             "type": "string",
-            "description": "The deployment environment (e.g., dev, prod)"
+            "description": "The deployment environment (e.g., dev, prod)",
+            "value": "devb"
         },
         "region": {
             "type": "string",
-            "description": "The AWS region where resources are deployed"
+            "description": "The AWS region where resources are deployed",
+            "value": "us-west-2"
         },
         "account_id": {
             "type": "string",
@@ -61,22 +64,12 @@
         {
             "id": "hibob_sqs_local_Compensation",
             "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Compensation?ref=_pov-variables",
-            "version": "1.0.0",
-            "props": {
-                "organization": {
-                    "value": "Props.organization"
-                }
-            }
+            "version": "1.0.0"
         },
         {
             "id": "hibob_sqs_local_Docs",
             "path": "git::https://github.com/andriizavoiko/tree.git//hibob-sqs-local-Docs?ref=_pov-variables",
-            "version": "1.0.0",
-            "props": {
-                "organization": {
-                    "value": "Props.organization"
-                }
-            }
+            "version": "1.0.0"
         },
         {
             "id": "hibob_sqs_local_Mapping",
