@@ -64,7 +64,7 @@
             "version": "1.0.0",
             "props": {
                 "organization": {
-                    "value": "Props.organization",
+                    "value": "Props.organization"
                 }
             }
         },
@@ -74,7 +74,7 @@
             "version": "1.0.0",
             "props": {
                 "organization": {
-                    "value": "Props.organization",
+                    "value": "Props.organization"
                 }
             }
         },
@@ -84,7 +84,7 @@
             "version": "1.0.0",
             "props": {
                 "organization": {
-                    "value": "Props.organization",
+                    "value": "Props.organization"
                 }
             }
         }
