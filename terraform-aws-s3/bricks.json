@@ -1,0 +1,100 @@
+{
+  "name": "S3 Bucket Configuration",
+  "description": "Configuration for creating and managing an S3 bucket",
+  "version": "1.0",
+  "props": {
+    "region": {
+      "type": "string",
+      "required": true,
+      "description": "The AWS region where the bucket will be created."
+    },
+    "create_bucket": {
+      "type": "bool",
+      "required": false,
+      "description": "Controls if the S3 bucket should be created",
+      "default": true
+    },
+    "bucket_name": {
+      "type": "string",
+      "required": true,
+      "description": "The name of the bucket"
+    },
+    "acl": {
+      "type": "string",
+      "required": false,
+      "description": "The canned ACL to apply to the bucket. Defaults to 'private'.",
+      "default": "private"
+    },
+    "block_public_acls": {
+      "type": "bool",
+      "required": false,
+      "description": "Whether Amazon S3 should block public ACLs for this bucket. Defaults to false.",
+      "default": true
+    },
+    "block_public_policy": {
+      "type": "bool",
+      "required": false,
+      "description": "Whether Amazon S3 should block public bucket policies for this bucket. Defaults to false.",
+      "default": true
+    },
+    "ignore_public_acls": {
+      "type": "bool",
+      "required": false,
+      "description": "Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to false.",
+      "default": true
+    },
+    "restrict_public_buckets": {
+      "type": "bool",
+      "required": false,
+      "description": "Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to false.",
+      "default": true
+    },
+    "force_destroy": {
+      "type": "bool",
+      "required": false,
+      "description": "A boolean that indicates all objects (including any locked objects) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable.",
+      "default": false
+    },
+    "server_side_encryption_configuration": {
+      "type": "any",
+      "required": false,
+      "description": "The server-side encryption configuration.",
+      "default": {}
+    },
+    "cors_rule": {
+      "type": "any",
+      "required": false,
+      "description": "A list of maps containing the CORS configuration. Each map contains the following keys: allowed_headers, allowed_methods, allowed_origins, expose_headers, max_age_seconds.",
+      "default": []
+    },
+    "lifecycle_rule": {
+      "type": "any",
+      "required": false,
+      "description": "A lifecycle rule for the bucket, which defines when objects in the bucket expire.",
+      "default": []
+    },
+    "versioning": {
+      "type": "any",
+      "required": false,
+      "description": "A boolean that indicates if versioning should be enabled for the bucket. Defaults to false.",
+      "default": {"enabled": true}
+    },
+    "logging": {
+      "type": "any",
+      "required": false,
+      "description": "A map of settings for logging object access in the bucket. The bucket_name key is required, and target_bucket and target_prefix are optional.",
+      "default": {}
+    }
+  },
+  "computed": {},
+  "outs": {
+    "bucket_name": {
+      "type": "string",
+      "description": "The name of the bucket"
+    }
+  },
+  "native": {
+    "type": "terraform",
+    "path": "."
+  }
+}
